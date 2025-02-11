@@ -5,4 +5,7 @@ $l4d2_path = (Get-ItemProperty $l4d2_reg -ErrorAction 0).InstallLocation
 if (!$l4d2_path) {return "> L4D2 path not found."}
 $addons_path = Join-Path $l4d2_path 'left4dead2\addons'
 
-Invoke-WebRequest $url -OutFile $addons_path
+try {Invoke-WebRequest $url -OutFile $addons_path}
+catch {Write-Host "> Web-request error." -ForegroundColor Red; return}
+
+Write-Host "> Done" -ForegroundColor Green
