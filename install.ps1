@@ -1,4 +1,4 @@
-$url = 'https://github.com/l4d2_4inazes_mod/releases/latest/download/l4d2_4inazes_mod.vpk'
+$url = 'https://github.com/boredwz/l4d2_4inazes_mod/releases/latest/download/l4d2_4inazes_mod.vpk'
 
 $l4d2_reg = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Steam App 550'
 $l4d2_path = (Get-ItemProperty $l4d2_reg -ErrorAction 0).InstallLocation
